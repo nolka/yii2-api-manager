@@ -4,7 +4,6 @@ namespace apiman\helpers;
 
 use apiman\exceptions\ExceptionErrorParserFields;
 use apiman\response\ModelResponse;
-use apiman\StringHelper;
 use yii\base\Exception;
 use yii\base\InvalidArgumentException;
 use yii\base\InvalidConfigException;

@@ -2,10 +2,6 @@
 
 namespace apiman\helpers;
 
-use yii\base\InvalidConfigException;
-use yii\db\ActiveRecord;
-use yii\db\BaseActiveRecord;
-
 /**
  * Class ArrayHelper
  * @package apiman\helpers
@@ -26,5 +22,21 @@ class ArrayHelper extends \yii\helpers\ArrayHelper
         }
 
         return $array;
+    }
+
+    /**
+     * Оборачивает ключи массива в заданные подстроки
+     * @param $arr
+     * @param string $left
+     * @param string $right
+     * @return array
+     */
+    public static function wrapKeys($arr, $left = '{', $right = '}')
+    {
+        $wrapped = [];
+        foreach ($arr as $k => $v) {
+            $wrapped["{$left}{$k}{$right}"] = $v;
+        }
+        return $wrapped;
     }
 }

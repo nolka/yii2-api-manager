@@ -2,9 +2,7 @@
 
 namespace apiman\helpers;
 
-use apiman\ArrayHelper;
-use apiman\StringHelper;
-use apiman\LogMessageTrait;
+use apiman\traits\LogMessageTrait;
 use Yii;
 use yii\web\Application;
 use yii\web\Controller;

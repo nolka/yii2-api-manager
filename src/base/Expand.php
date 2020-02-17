@@ -1,4 +1,5 @@
 <?php
+
 namespace apiman\base;
 
 use api\versions\v1\models\response\ImageThumbsResponse;
@@ -109,7 +110,7 @@ class Expand extends BaseObject
         $array = explode("\n", $docs);
         $is_array = false;
         foreach ($array as $item) {
-            if (mb_strpos($item, '@field') !== false) { // * @field \api\versions\v1\modules\store\models\response\AttributeResponse[]
+            if (mb_strpos($item, '@field') !== false) {
                 if (mb_strpos($item, '[]') !== false) {
                     $is_array = true;
                 }
