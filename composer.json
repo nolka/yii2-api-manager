@@ -1,0 +1,32 @@
+{
+    "name": "nolka/yii2-api-manager",
+    "description": "REST api Field management and swagger generation extension for Yii2",
+    "type": "yii2-extension",
+    "license": "MIT",
+    "keywords": ["yii2", "extension", "php", "swagger", "generator", "doc", "docs", "documentation", "rules"],
+    "homepage": "https://github.com/nolka/yii2-api-manager",
+    "authors": [
+        {
+            "name": "Ruslan Mitskevich",
+            "email": "ruslantm.ru@gmail.com",
+            "role": "Project initiator and owner",
+            "homepage": "https://github.com/mitrm"
+        },
+        {
+            "name": "Viktor Potekhin",
+            "email": "xternalx@gmail.com",
+            "role": "Developer",
+            "homepage": "https://github.com/nolka"
+        }
+    ],
+    "minimum-stability": "stable",
+    "require": {
+        "php": ">=7.2.0",
+        "yiisoft/yii2": "~2.0.14"
+    },
+    "autoload": {
+        "psr-4": {
+            "apiman\\": "src"
+        }
+    }
+}
