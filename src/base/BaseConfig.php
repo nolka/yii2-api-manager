@@ -36,8 +36,7 @@ class BaseConfig extends BaseObject
     public $className;
 
     /**
-     * @brief
-     * @throws \yii\base\InvalidConfigException
+     * @inheritDoc
      */
     public function init()
     {
@@ -48,7 +47,7 @@ class BaseConfig extends BaseObject
     }
 
     /**
-     * подготовка объектов для работы с полем
+     * Подготовка объектов для работы с полем
      * @throws \yii\base\InvalidConfigException
      */
     protected function initFields()
@@ -69,7 +68,7 @@ class BaseConfig extends BaseObject
     }
 
     /**
-     * подготовка объектов для работы с полем
+     * Подготовка объектов для работы с полем
      * @throws \yii\base\InvalidConfigException
      */
     protected function initExpand()

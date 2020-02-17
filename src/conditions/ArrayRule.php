@@ -2,7 +2,6 @@
 namespace apiman\conditions;
 
 use apiman\base\Field;
-use yii\base\InvalidConfigException;
 
 /**
  * Class ArrayRule
@@ -11,7 +10,6 @@ use yii\base\InvalidConfigException;
 class ArrayRule extends Rule implements InterfaceRule
 {
     /**
-     * @brief
      * @return array
      */
     public function getFieldsName()
@@ -38,7 +36,6 @@ class ArrayRule extends Rule implements InterfaceRule
     }
 
     /**
-     * @brief
      * @return array
      */
     public function getExpandsName()

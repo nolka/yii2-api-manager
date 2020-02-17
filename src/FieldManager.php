@@ -20,7 +20,7 @@ use yii\data\DataProviderInterface;
  * FieldManager компонен ограничивает запросы в соответствии с правилами загруженными в
  * параметр rules
  *
- * Пример подключения компонена:
+ * Пример подключения компонента:
  *
  * 'components' => [
  *     'fieldManager' => [
@@ -149,7 +149,6 @@ class FieldManager extends Component
     }
 
     /**
-     * @brief
      * @param $fieldNames
      * @return array
      */
@@ -183,6 +182,8 @@ class FieldManager extends Component
      * @param array $expandRequested
      * @return array|mixed
      * @throws InvalidConfigException
+     * @throws \yii\console\Exception
+     * @throws \yii\web\NotFoundHttpException
      */
     public function getFields($className, $expandRequested = [])
     {
@@ -317,7 +318,6 @@ class FieldManager extends Component
     }
 
     /**
-     * @brief
      * @param $ruleDeclarations
      * @param $builtRules
      * @return bool
@@ -331,7 +331,6 @@ class FieldManager extends Component
     }
 
     /**
-     * @brief
      * @param $ruleDeclarations
      * @return bool|mixed
      */

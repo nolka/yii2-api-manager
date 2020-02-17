@@ -8,8 +8,6 @@ use apiman\helpers\annotations\ClassAnnotation;
 use apiman\helpers\annotations\ExpandAnnotation;
 use apiman\helpers\annotations\FieldAnnotation;
 use apiman\response\ModelResponse;
-use apiman\helpers\ArrayHelper;
-use apiman\helpers\StringHelper;
 use apiman\traits\LogMessageTrait;
 use Yii;
 use yii\base\InvalidConfigException;

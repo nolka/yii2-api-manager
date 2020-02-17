@@ -1,11 +1,8 @@
 <?php
 namespace apiman\conditions;
 
-use Yii;
-use yii\base\InvalidConfigException;
 use apiman\base\BaseConfig;
-use yii\web\Request;
-use apiman\base\Field;
+use yii\base\InvalidConfigException;
 
 /**
  * Class Rule

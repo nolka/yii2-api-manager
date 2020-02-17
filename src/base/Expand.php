@@ -2,7 +2,6 @@
 
 namespace apiman\base;
 
-use api\versions\v1\models\response\ImageThumbsResponse;
 use apiman\helpers\StringHelper;
 use yii\base\BaseObject;
 use yii\base\Model;
@@ -37,8 +36,7 @@ class Expand extends BaseObject
     public $method = ['GET', 'POST', 'DELETE', 'PUT'];
 
     /**
-     * @brief
-     * @throws \yii\base\InvalidConfigException
+     * @inheritDoc
      */
     public function init()
     {
@@ -46,7 +44,8 @@ class Expand extends BaseObject
     }
 
     /**
-     * функция определяем класс который возвращается в поле extraFields
+     * Функция определяем класс который возвращается в поле extraFields
+     * @throws \ReflectionException
      * @throws \yii\base\InvalidConfigException
      */
     private function definitionClassName()
@@ -64,7 +63,7 @@ class Expand extends BaseObject
         }
 
         if ($method == 'getImageThumbs') {
-            $this->className = ImageThumbsResponse::class;
+            $this->className = 'api\versions\v1\models\response\ImageThumbsResponse';
         } elseif ($object->hasMethod($method)) {
             // в первую очередь проверяем есть ли у функции в разделе документации поле @field с названием класса
             list($this->className) = $this->getReturnedInDocs($this->parentClassName, $method);
@@ -81,7 +80,7 @@ class Expand extends BaseObject
                 }
             }
         } else {
-            // Возморжно это анонимная функция, проверяем
+            // Возможно это анонимная функция, проверяем
             if ($object->extraFields()[$this->name] instanceof \Closure) {
                 $link = $object->extraFields()[$this->name]($object);
                 if ($link instanceof QueryInterface) {
@@ -99,10 +98,11 @@ class Expand extends BaseObject
     }
 
     /**
-     * функция ищет определение возвращаемого значения в документации к функции
+     * Функция ищет определение возвращаемого значения в документации к функции
      * @param $className
      * @param $method
      * @return array|null
+     * @throws \ReflectionException
      */
     private function getReturnedInDocs($className, $method)
     {

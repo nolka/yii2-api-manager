@@ -55,7 +55,6 @@ class TypeRule extends BaseObject
     private $_prefix = 'v1';
 
     /**
-     * @brief
      * @throws \yii\base\InvalidConfigException
      */
     public function init()
@@ -79,7 +78,6 @@ class TypeRule extends BaseObject
     }
 
     /**
-     * @brief
      * @param $route
      * @return array|string
      */

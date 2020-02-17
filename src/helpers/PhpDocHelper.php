@@ -3,7 +3,6 @@ namespace apiman\helpers;
 
 /**
  * Работа с комментриями классов и методов
- * Class PhpDocHelper
  * @package apiman\helpers
  */
 class PhpDocHelper

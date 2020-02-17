@@ -7,6 +7,10 @@ use apiman\helpers\SwaggerGenerator;
 use apiman\helpers\FileHelper;
 use Yii;
 
+/**
+ * Генерация документации
+ * @package apiman\actions
+ */
 class GenerateDocAction extends \yii\base\Action
 {
     /**

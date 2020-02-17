@@ -8,13 +8,11 @@ namespace apiman\conditions;
 interface InterfaceRule
 {
     /**
-     * @brief
      * @return array
      */
     public function getFieldsName();
 
     /**
-     * @brief
      * @return array
      */
     public function getExpandsName();

@@ -7,7 +7,7 @@ use apiman\helpers\SwaggerGenerator;
 use Yii;
 
 /**
- * Class GenerateDocValidateAction
+ * Генерация документации с последующими проверками. Ранее созданный файл документации не перезаписывается в любом случае
  * @package apiman\actions
  */
 class GenerateDocValidateAction extends \yii\base\Action

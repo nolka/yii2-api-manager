@@ -2,7 +2,6 @@
 namespace apiman\base;
 
 use yii\filters\auth\HttpBearerAuth;
-use yii\rest\Serializer;
 
 /**
  * Class RestController

@@ -17,7 +17,6 @@ use apiman\interfaces\ResponseModelInterface;
  */
 class Serializer extends \yii\rest\Serializer
 {
-
     /**
      * Переименован по прозьбе фронта
      * @var string the name of the HTTP header containing the information about the number of data items in each page.
@@ -46,7 +45,6 @@ class Serializer extends \yii\rest\Serializer
     public $rules;
 
     /**
-     * @brief
      * @param mixed $data
      * @return array|mixed|null
      */
@@ -64,27 +62,6 @@ class Serializer extends \yii\rest\Serializer
         }
         return $data;
     }
-
-    /**
-     * Наброски, пока не используется
-     * @param $_data
-     */
-    private function serializeResponseModel(ResponseModelInterface $_data)
-    {
-        list($fields, $expands) = $this->getRequestedFields();
-
-        $return = [];
-
-        if (is_array($expands) && count($expands)) {
-            foreach ($expands as $expand) {
-                if ($this->_data->$expand instanceof DataProviderInterface) {
-                    $return[$expand] = $this->serializeDataProvider($this->_data->$expand);
-                }
-            }
-        }
-        return $return;
-    }
-
 
     /**
      * Обработка массива
@@ -112,7 +89,7 @@ class Serializer extends \yii\rest\Serializer
     }
 
     /**
-     * @brief
+     * Обработка модели
      * @param Arrayable $model
      * @return array|null
      */
@@ -158,7 +135,7 @@ class Serializer extends \yii\rest\Serializer
     }
 
     /**
-     * @brief
+     * Сериализация массива моделей
      * @param array $models
      * @return array
      */
@@ -179,7 +156,6 @@ class Serializer extends \yii\rest\Serializer
     }
 
     /**
-     * @brief
      * @return array
      * @throws \yii\base\InvalidConfigException
      */

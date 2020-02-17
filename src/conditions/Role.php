@@ -22,7 +22,6 @@ class Role extends BaseConfig
     private $_user;
 
     /**
-     * @brief
      * @throws \yii\base\InvalidConfigException
      */
     public function init()
@@ -32,7 +31,6 @@ class Role extends BaseConfig
     }
 
     /**
-     * @brief
      * @param $role
      * @return bool
      */

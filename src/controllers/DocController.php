@@ -7,8 +7,8 @@ use apiman\helpers\ArrayHelper;
 use yii\console\Controller;
 
 /**
- * Class FieldManagerController
- * @package console\controllers
+ * Class DocController
+ * @package apiman\controllers
  */
 class DocController extends Controller
 {
@@ -26,7 +26,7 @@ class DocController extends Controller
      */
     public function options($actionID)
     {
-        if (in_array($actionID, ['generate-doc2', 'generate-validate2'])) {
+        if (in_array($actionID, ['generate', 'validate'])) {
             return ArrayHelper::merge(parent::options($actionID), [
                 'useCache', 'validateRoutes'
             ]);
@@ -40,7 +40,7 @@ class DocController extends Controller
     public function actions()
     {
         return [
-            'generate' => [ // php yii field-manager/generate-doc
+            'generate' => [
                 'class' => GenerateDocAction::class, // Валидация Генерации api документации для swagger,
                 'useCache' => $this->useCache,
                 'validateRoutes' => $this->validateRoutes,
