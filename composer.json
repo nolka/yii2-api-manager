@@ -9,8 +9,13 @@
         {
             "name": "Ruslan Mitskevich",
             "email": "ruslantm.ru@gmail.com",
-            "role": "Project initiator and owner",
+            "role": "Developer",
             "homepage": "https://github.com/mitrm"
+        },
+        {
+            "name": "Dmitry Listkov",
+            "email": "svizzle@yandex.ru",
+            "role": "Developer"
         },
         {
             "name": "Viktor Potekhin",
