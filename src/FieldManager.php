@@ -103,7 +103,8 @@ class FieldManager extends Component
         } elseif ($dataProvider instanceof DataProviderInterface) {
             $models = $dataProvider->getModels();
             if (is_array($models) && !empty($models)) {
-                return get_class($models[0]);
+                reset($models);
+                return get_class($models[key($models)]);
             }
         }
         return null;
